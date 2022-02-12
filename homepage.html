@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧经贸[学生]</title>
+    <style type="text/css">
+        @charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; border:0;}
+html{font-size:62.5%;}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1; background-color:#FFFFFF; font-family:"微软雅黑","Microsoft YaHei",tahoma,Srial,helvetica,sans-serif;}
+input,textarea,select{margin:0;padding:0;outline:none;resize:none;}
+ul,li{list-style:none;list-style-type:none;}
+a{color:#666666; text-decoration:none;}
+a:hover{color:#333333; text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-size:1.0rem; font-weight:normal;}
+.fl{float:left;}
+.fr{float:right;}
+/******clear float*******/
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;} 
+.clearfix{*zoom:1;}
+.clear{clear:both;}
+
+/*主体*/
+.Tch-head{height:68px; background:#404040; margin:0 0 1px 0; text-align:center;}
+.Tch-head img{max-width:100%; margin:8px 0 0;height:50px}
+.Tch-banner{margin:0 0 8px 0;}
+.Tch-banner img{max-width:100%;}
+.Tch-content{border-top:1px solid #e2e2e2;}
+.Tch-content div{width:25%; float:left;}
+.Tch-content li{height:116px; border-bottom:1px solid #e2e2e2; border-left:1px solid #e2e2e2; text-align:center; font-size:2rem;}
+.Tch-content li a{display:block; height:100%;}
+.Tch-content li a:hover{background:#f5f5f5;}
+.Tch-content li a p{height:80px;}
+.Tch-content li a p+p{height:32px; line-height:32px;}
+.Tch-content li a p img{margin:40px auto 0;}
+.Tch2-content li a p img{margin:20px auto 0; width:60px}
+.Tch-line{clear:both; height:108px;}
+.Tch-foot{height:50px; background:#f2f2f2; position:fixed; bottom:0; width:100%; z-index:9999; font-size:1.5rem;}
+.Tch-foot li{width:33.3%; float:left;}
+.Tch-foot li a{margin:10px auto 0; display:block; width:100%; float:left; color:#999999; text-align:center; background:url(images/Tch-home.png) no-repeat 50% 0px; height:40px; line-height:65px;}
+.Tch-foot li a:hover{ background:url(images/Tch-home.png) no-repeat 50% 0px; color:#666666}
+.Tch-foot li+li a{ background:url(images/Tch-person.png) no-repeat 50% 0px;}
+.Tch-foot li+li a:hover{ background:url(images/Tch-person.png) no-repeat 50% 0px;}
+.Tch-foot li+li+li a{ background:url(images/Tch-about.png) no-repeat 50% 0px;}
+.Tch-foot li+li+li a:hover{ background:url(images/Tch-about.png) no-repeat 50% 0px;}
+
+/*子页面*/
+.Tch-head0{text-index:30px;height:55px;text-align:center;line-height:55px; background:#404040;overflow:hidden; font-size:2rem;}
+.Tch-head0 a{color:#ffffff;}
+.Tch-head0 a.Sub-left{float:left;display:block;width:36px;height:36x; cursor:pointer;background:url(../images/Sub-icon01.png) no-repeat; margin:2% 0 0 3%;}
+.Sub-menu div{width:50%; float:left; font-size:2rem;}
+.Sub-menu div li{height:60px; border-bottom:1px solid #e2e2e2; line-height:60px; border-left:1px solid #e2e2e2;}
+.Sub-menu li a{width:90%; margin:0 auto; display:block; text-indent:40px;}
+.Sub-menu div li a{background:url(../images/Sub-icon02.png) no-repeat 8px 16px;}
+.Sub-menu div+div li a{background:url(../images/Sub-icon03.png) no-repeat 8px 16px;}
+.Sub-menu div+div+div li a{background:url(../images/Sub-icon04.png) no-repeat 8px 16px;}
+.Sub-menu div+div+div+div li a{background:url(../images/Sub-icon05.png) no-repeat 8px 16px;}
+.Sub-ss{ padding:16px 0; margin:1px auto;width:90%}
+.Sub-tit{text-align:center; height:36px; line-height:36px; font-size:2.25rem;}
+.Sub-tab table{border-top:1px solid #eaeaea; border-left:1px solid #eaeaea; line-height:20px;}
+.Sub-tab table tr td{padding:10px 6px; border-right:1px solid #eaeaea; border-bottom:1px solid #eaeaea; font-size:1.75rem;}
+.Sub-kcbt{background:#37d5b2; color:#ffffff; font-size:1.75rem; height:36px; line-height:36px; margin:5px 0; padding:0 0 0 6px;}
+.Sub-tab-bg1{background:#dadada;}
+.Sub-tab-bg2{background:#f3f3f3;}
+.Sub-in{padding:12px 0; font-size:2rem;width:49%; float:left}
+.Sub-in label{width:30%; text-align:right; display:block; float:left; line-height:30px;}
+.Sub-input{width:60%; height:30px; line-height:30px; border:1px solid #eaeaea; text-indent:3px;font-size:1.75rem;}
+datalist{font-size:2rem;}
+.Sub-input2{width:50%; height:30px; line-height:30px; border:1px solid #eaeaea; text-indent:3px;font-size:1.75rem;}
+.Sub-btn{width:50%; height:40px; line-height:40px; text-align:center; background:#f5a623; color:#ffffff; border-radius:6px; cursor:pointer; font-size:2rem;}
+
+
+.Sub-tab_new table,
+.Sub-tab_new td,
+.Sub-tab_new th {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+.Sub-tab_new td,
+.Sub-tab_new th {
+	border: 1px solid #bcbcbc;
+	padding: 10px 10px;
+	font-size: 1.75rem;
+}
+
+.Sub-tab_new th {
+	background: #FFFFCE;
+	font-size: 1.75rem;
+	font-weight: 400;
+	color: #000;
+	cursor: pointer
+}
+
+.Sub-tab_new tr:nth-of-type(odd) {
+	background: #fff
+}
+
+.Sub-tab_new tr:nth-of-type(even) {
+	background: #eee
+}
+
+/* 根据屏幕大小适配界面显示样式 */
+@media screen and (min-width:720px) and (max-width:1440px) {
+	/* 字体大小适配 */
+	html { font-size: 72.5%;}
+}
+
+@media screen and (min-width:480px) and (max-width:720px) {
+	html { font-size: 62.5%;}
+	
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+	html { font-size: 47.5%;}
+}
+
+@media screen and (max-width:480px){
+	html { font-size: 47.5%;}
+}
+.button2 {
+	padding: 8px 0px; border-radius: 2px;  width: 100%; text-align: center; color:#fff; font-size: 16px;  background-color:#0099ff; text-shadow: 0.5px 0.5px 1px #fff;
+}
+
+        
+    </style>
+</head>
+
+<body>
+    <form name="form1" method="post" action="./DefaultStudent.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY2MjIyODIwNWRkvOhiFpRxPvjc1L7EKhv6OT2D0MDuOn5qbySjYDMuALs=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5BF0B9FB" />
+</div>
+    	<header class="Tch-head">
+    	<img src="images/Tch-logo.png">        
+    </header>
+    <section class="Tch-banner">
+    	<div class="flicker-example" data-block-text="false">
+	<ul>
+		<li data-background="images/field.jpg">
+		
+		</li>
+		<li data-background="images/forest.jpg">
+			
+		</li>
+		<li data-background="images/frozen-water.jpg">
+			
+		</li>
+	</ul>
+</div>
+    </section>
+
+
+    <div class="Tch-content Tch2-content">
+
+	<div>
+            <ul>
+                <li>
+                  <!--  <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000013&appKey=B808C2D96E5C4D2EBA765C59FCCD9E45&redirect_url=http://ehall.henetc.edu.cn/xsfw/sys/swmjbxxapp/*default/index.do"> -->
+				   <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=student/stufdycp.aspx&type=student">
+                        <p><img src="images/xxws.png"></p>
+                        <p>辅导员测评</p>
+                    </a>
+                </li >
+            </ul>      
+        </div>
+	
+
+	<div>
+            <ul>
+                <li>
+                    <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000028&appKey=9DE6BA06409B459F994FD873342FB21F&redirect_url=https://answers.hnjmxy.cn/survey/core/mobile/person/login"> 
+					<!--<a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=student/stufdycp.aspx&type=student"> -->
+                        <p><img src="images/hydt.png"></p>
+                        <p>问卷调查</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+
+		
+		<div>
+            <ul>
+                <li>
+                    <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000018&appKey=E9EDE256863B4C688A6FDED944257A96&redirect_url=http://xlopenapi.hnjmxy.cn/openapi/caslogin"> 
+				   <!--<a href="error.aspx?errmsg=系统维护中！"> -->
+                        <p><img src="images/xljk.png"></p>
+                        <p>心理健康</p>
+                    </a>
+                </li >
+            </ul>      
+        </div>
+
+
+		<div>
+            <ul>
+                <li>
+					 <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000028&appKey=9DE6BA06409B459F994FD873342FB21F&redirect_url=https://answers.hnjmxy.cn/ucenter/core/user/loginRouteAnswers">  
+					<!-- <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=ddzs/StudentRegister.aspx&type=student"> -->
+                        <p><img src="images/zxks.png"></p>
+                        <p>在线考试</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+
+
+<div>
+            <ul>
+                <li>
+					<!-- <a href="error.aspx?errmsg=登记系统已关闭！">  -->
+					 <a href="https://hnjmxy.cpdaily.com/wec-amp-boya/mobile/index.html?botId=730012071835467776&login=0">
+                        <p><img src="images/xybst.png"></p>
+                        <p>校园百事通</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+
+
+
+
+    	<div>
+            <ul>
+                <li>
+                    <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=student/bjkbcx.aspx&type=student">
+                        <p><img src="images/Tch2-icon01.png"></p>
+                        <p>课表查询</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=student/cjcx.aspx&type=student">
+                        <p><img src="images/Tch2-icon02.png"></p>
+                        <p>成绩查询</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div>
+            <ul>
+                <li>
+                   <!-- <a href="error.aspx?errmsg=请假系统已关闭！">  -->
+					 <a href="list.html">
+                        <p><img src="images/zxqj.png"></p>
+                        <p>在线请假</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000027&appKey=FE3BB913436E4B70A229C274CC53ADBC&redirect_url=http://ehall.henetc.edu.cn/xsfw/sys/swmknsapp/*default/index.do">
+                        <p><img src="images/pksrd.png"></p>
+                        <p>贫困生认定</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>        
+        <div>
+            <ul>
+                <li>
+                    <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=student/tsjycx.aspx&type=student">
+                        <p><img src="images/Tch2-icon05.png"></p>
+                        <p>图书借阅</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <!--<a href="error.aspx?errmsg=系统升级维护,请稍候再试！"> -->
+					<a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=pay/paycode.aspx&type=student&payment_type=Lighting"> 
+                        <p><img src="images/Tch2-icon06.png"></p>
+                        <p>宿舍水电</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=student/jfcx.aspx&type=student">
+                        <p><img src="images/Tch2-icon07.png"></p>
+                        <p>缴费查询</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div>
+            <ul>
+                <li>
+					<!--<a href="error.aspx?errmsg=系统升级维护,请稍候再试！"> -->
+                    <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=readme.aspx&type=student">
+                        <p><img src="images/Tch2-icon08.png"></p>
+                        <p>教师测评</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div>
+            <ul>
+                <li>
+				<a href="error.aspx?errmsg=系统已关闭"> 
+                <!--   <a href="https://hub.17wanxiao.com/bsacs/scanCode.action?flag=hnjm_h5_847&paytype=weixin"> -->
+                        <p><img src="images/yktcz.png"></p>
+                        <p>手机一卡通</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+<!--
+         <div>
+            <ul>
+                <li>
+                   <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=student/wxdk.aspx&type=student"> 
+                   <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=pay/paycode.aspx&type=student&payment_type=ktjf"> 
+                        <p><img src="images/Tch2-icon09.png"></p>
+                        <p>微信考勤</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+ -->
+        <div>
+            <ul>
+                <li>
+                    <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=student/ticket.aspx&type=student">
+                        <p><img src="images/Tch2-icon011.png"></p>
+                        <p>我要抢票</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000022&appKey=B346AB52A7BC498A8A261671862A40DE&redirect_url=http://cwcx.hnjmxy.cn/xysf/GzCasLogin.aspx">
+                        <p><img src="images/zxjf.png"></p>
+                        <p>在线缴费</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+
+		<div>
+            <ul>
+                <li>
+                <!--   <a href="error.aspx?errmsg=缴费暂停使用">  -->
+					  <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=pay/paycode.aspx&type=student&payment_type=ktjf"> 
+                        <p><img src="images/Tch2-icon06.png"></p>
+                        <p>空调缴费</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+		
+		
+		
+		<div>
+            <ul>
+                <li>
+					 <!--<a href="error.aspx?errmsg=登记系统已关闭！"> -->
+					 <a href="http://hqcbx.hnjmxy.cn/repair/wapRedirect/v3/manage/index"> 
+                        <p><img src="images/wlbx.png"></p>
+                        <p>网络报修</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+		<div>
+            <ul>
+                <li>
+                    <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000010&appKey=6A22275967834F9BBCF49936CE364B9C&redirect_url=http://ehall.henetc.edu.cn/xsfw/sys/swmjjrlfxapp/*default/index.do">
+                        <p><img src="images/lxdj.png" ></p>
+                        <p>离返校登记</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+		
+		<div>
+            <ul>
+                <li>
+                    <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000011&appKey=BFE080F9E3EF4DBB9B8BD4BB2B78BCEC&redirect_url=http://ehall.henetc.edu.cn/xsfw/sys/swmlxapp/*default/index.do">
+                        <p><img src="images/byslx.png" ></p>
+                        <p>毕业离校</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+		<div>
+            <ul>
+                <li>
+                    <a href="http://auth.hnjmxy.cn/RZPT/weixin/getAppToken?appId=000000016&appKey=BDC68B93719E407DB4A0CA6CB8DC9065&redirect_url=http://lock.hnjmxy.cn/lockapp/index">
+                        <p><img src="images/dorm_lock.png" ></p>
+                        <p>智能门锁</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+
+		<div>
+            <ul>
+                <li>
+                    <a href="transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&page=zmzyz/bmlist.aspx&type=student">
+					<!--<a href="error.aspx?errmsg=系统正在升级维护中，请稍后再试"> -->
+                        <p><img src="images/zmzyz.png"></p>
+                        <p>招募志愿者</p>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+
+        
+    </div>
+    <div class="clear"></div>
+       
+<div class="Tch-line">&nbsp;</div>
+<footer class="Tch-foot">
+  <ul>
+    <li> <a href="../transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&type=mainstudent">首页</a> </li>
+    <li> <a href="../transfer.aspx?wxid=oWgnXt7MKyhzuwo8zOde1cl6WLDk&oprate=bind&type=student">个人中心</a> </li>
+    <li> <a href="#">关于我们</a> </li>
+  </ul>
+</footer>
+   
+    </form>
+</body>
+</html>

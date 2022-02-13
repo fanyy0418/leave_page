@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--请假列表-->
 <html lang="zh-CN">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -64,15 +65,53 @@
                     </a>
 
 
+                    <!--未销假提示-->
+                    <!--id用来定位元素,display属性：block=显示；none=隐藏-->
+                    <div id="error" class="mint-msgbox-wrapper" style="position: absolute; z-index: 2011;display: none;">
+                        <div class="mint-msgbox mt-bg-white">
+                            <div class="mint-msgbox-header">
+                                <div class="mint-msgbox-title mt-color-grey">
+                                    提示
+                                </div>
+                            </div>
+                            <div class="mint-msgbox-content">
+                                <div class="mint-msgbox-message mt-color-grey-lv3">
+                                    存在待审核或未销假的请假记录，不可继续请假!
+                                </div>
+                            </div>
+                            <div class="mint-msgbox-btns">
+                                <!--onclick用来触发函数-->
+                                <button onclick="none()" class="mint-msgbox-btn mint-msgbox-confirm mt-btn-primary">
+                                    确定
+                                </button>
+                                <!--隐藏提示函数-->
+                                <script>
+                                    function none()
+                                    {
+                                        document.getElementById('error').style.display='none';
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <!--加号-->
-                    <a href="list2.html">
+                    <button onclick="block()" style="border: 0;padding: 0;background-color: #f9f9f9;">
                         <div class="mint-fixed-button mt-color-white sjarvhx43 mint-fixed-button--bottom-right mint-fixed-button--primary mt-bg-primary" size="40px" contentmargintop="0" text="+" style="right: 16px; bottom: 20px;">
                             <div class="mint-fixed-button--plus">
                                 <div class="mint-fixed-button--plus_h"></div>
                                 <div class="mint-fixed-button--plus_v"></div>
                             </div>
                         </div>
-                    </a>
+                        <!--显示提示函数-->
+                        <script>
+                            function block()
+                            {
+                                document.getElementById('error').style.display='block';
+                            }
+                        </script>
+                    </button>
 
     </body>
 </html>

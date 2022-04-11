@@ -3,8 +3,9 @@
 
 <!--
     需要改的：
-        当前日期：2022-05-22 ；当前天数：1 ；
-    每次改完后记得把当前日期全部替换，方便下次查找替换
+        当前日期：2022-03-10 ；!!!当前通过脚本自动获取时间，默认为当日日期。
+        当前天数：1 ；!!!默认为一天。
+    每次改完后记得把当前日期全部替换，方便下次查找替换。
 
     可以直接查找：改动点。
 -->
@@ -31,6 +32,20 @@
         <link rel="stylesheet" href="css/cropper.min.css">
         <title>请假</title>
     </head>
+    <script type="text/javascript">
+        var t=new Date();//获取当前时间
+        var year=t.getFullYear();//获取当前时间的年份
+        var month=t.getMonth();//获取当前时间的月份
+        var day=t.getDate();//获取当前时间的日
+        //var week=t.getDay();//获取当前时间的星期
+        //var arr=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");//规范星期的输出
+        //var hour=t.getHours();///获取当前时间的时
+        //var minute=t.getMinutes();//获取当前时间的分
+        //var second=t.getSeconds();//获取当前时间的秒
+        //var showTime=year+"/"+month+"/"+day+""+arr[week]+" "+hour+((minute<10)?":0":":")+minute+((second<10)?":0":":")+second+((hour>12)?".pm":".am");//规范整体时间的输出
+        showTime=year+((month<10)?"-0":"-")+(month+1)+"-"+day;//未知原因导致月份小1个月
+        //document.write(showTime);
+    </script>
 
     <body>
         <div id="app"><!----> 
@@ -63,7 +78,7 @@
                                     <div position="left" class="mint-layout-lr-item mint-layout-container">
                                         <!--改动点-->
                                         <div class="mint-text bh-color-gray-3 sjaky9s9n mt-color-default">
-                                            2022-05-22 至 2022-05-22 / 共1天
+                                            <script>document.write(showTime);</script> 至 <script>document.write(showTime);</script> / 共1天
                                         </div>
                                     </div>
                                     <div position="right" class="mint-layout-lr-item mint-layout-container OCjaup3gjo"></div>

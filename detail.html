@@ -3,10 +3,13 @@
 
 <!--
     需要改的：
-        当前日期：2022-05-22 ；当前时间：08:00 22:00 （英文冒号） ；当前天数 1 ；
-        审批时间 08:58:20 ；
-        手机号：18638760863 ；学号：201925821 ；
-    每次改完后记得把当前日期全部替换，方便下次查找替换
+        当前日期：2022-03-10 ；!!!当前通过脚本自动获取时间，默认为当日日期。
+        当前天数 1 ；!!!默认为一天。
+        当前时间：08:00 22:00 （英文冒号） ；
+        审批时间 08:58:20 ；请假理由：探亲；
+        手机号：18637860830 ；学号：201925821 ；
+        审核人：一班：200525；二班：200903；不要用全部替换！！！
+    每次改完后记得把当前日期全部替换，方便下次查找替换。
 
     可以直接查找：改动点。
 -->
@@ -298,6 +301,20 @@
 
         <title>请假</title>
     </head>
+    <script type="text/javascript">
+        var t=new Date();//获取当前时间
+        var year=t.getFullYear();//获取当前时间的年份
+        var month=t.getMonth();//获取当前时间的月份
+        var day=t.getDate();//获取当前时间的日
+        //var week=t.getDay();//获取当前时间的星期
+        //var arr=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");//规范星期的输出
+        //var hour=t.getHours();///获取当前时间的时
+        //var minute=t.getMinutes();//获取当前时间的分
+        //var second=t.getSeconds();//获取当前时间的秒
+        //var showTime=year+"/"+month+"/"+day+""+arr[week]+" "+hour+((minute<10)?":0":":")+minute+((second<10)?":0":":")+second+((hour>12)?".pm":".am");//规范整体时间的输出
+        showTime=year+((month<10)?"-0":"-")+(month+1)+"-"+day;//未知原因导致月份小1个月
+        //document.write(showTime);
+    </script>
     <body>
         <div id="app">
             <div>
@@ -372,7 +389,7 @@
                                                             <div class="mint-cell-value mt-color-grey-lv3" style="flex: 1 1 calc(100% - 96px); justify-content: normal;">
                                                                 <!--改动点-->
                                                                 <div class="em-select-value mt-color-grey-lv3">
-                                                                    2022-05-22 08:00 至 2022-05-22 22:00
+                                                                    <script>document.write(showTime);</script> 08:00 至 <script>document.write(showTime);</script> 22:00
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -397,7 +414,7 @@
                                                             <div class="mint-cell-value mt-color-grey-lv3" style="flex: 1 1 calc(100% - 96px); justify-content: normal;">
                                                                 <!--改动点-->
                                                                 <div class="em-select-value mt-color-grey-lv3">
-                                                                    2022-05-22
+                                                                    <script>document.write(showTime);</script>
                                                                 </div>
                                                             </div>
                                                             
@@ -424,7 +441,7 @@
                                                             <div class="mint-cell-value mt-color-grey-lv3" style="flex: 1 1 calc(100% - 96px); justify-content: normal;">
                                                                 <!--改动点-->
                                                                 <div class="em-select-value mt-color-grey-lv3">
-                                                                    2022-05-22
+                                                                    <script>document.write(showTime);</script>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -591,7 +608,7 @@
                                                             <div class="mint-cell-value mt-color-grey-lv3" style="flex: 1 1 calc(100% - 96px); justify-content: normal;">
                                                                 <!--改动点-->
                                                                 <div class="em-select-value mt-color-grey-lv3">
-                                                                    18638760863
+                                                                    18637860830
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -629,7 +646,7 @@
                                                 <!--提交申请的时间-->
                                                 <!--改动点-->
                                                 <div class="mint-text bh-color-gray-4 OCjaunojrmr mt-color-default">
-                                                    2022-05-22
+                                                    <script>document.write(showTime);</script>
                                                 </div>
                                             </div>
                                             <div class="mint-step__title">
@@ -649,7 +666,7 @@
                                                 <!--辅导员审核时间-->
                                                 <!--改动点-->
                                                 <div class="mint-text bh-color-gray-4 OCjaunojrmr mt-color-default">
-                                                    2022-05-22 08:58:20
+                                                    <script>document.write(showTime);</script> 08:58:20
                                                 </div>
                                             </div>
                                             <div class="mint-step__title">
@@ -657,7 +674,7 @@
                                                 <span class="bh-color-warning"></span>
                                                 <div>
                                                     <div class="mint-text OCjaunojrix mt-color-default">通过</div>
-                                                    <div class="mint-text OCjaunojrix mt-color-default">审核人：200903</div>
+                                                    <div class="mint-text OCjaunojrix mt-color-default">审核人：200525</div>
                                                     <div class="mint-text OCjaunojrix mt-color-default">
                                                         <pre>审核意见：同意</pre>
                                                     </div>

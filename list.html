@@ -11,131 +11,137 @@
 -->
 
 <html lang="zh-CN">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!--/公共jsp -->
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <!-- 用来禁止浏览器缓存，使得每次请求test.html都从服务器下载最新版本 -->
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
-        <meta name="format-detection" content="telephone=yes">
 
-        <link rel="stylesheet" href="css/bh-lib.min.css">
-        <link rel="stylesheet" href="css/iconfont.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/mob.css">
-        <link rel="stylesheet" href="css/skin.css">
-        <link rel="stylesheet" href="css/style.min.css">
-        <link rel="stylesheet" href="css/cropper.min.css">
-        <title>请假</title>
-    </head>
-    <script type="text/javascript">
-        var t=new Date();//获取当前时间
-        var year=t.getFullYear();//获取当前时间的年份
-        var month=t.getMonth();//获取当前时间的月份
-        var day=t.getDate();//获取当前时间的日
-        //var week=t.getDay();//获取当前时间的星期
-        //var arr=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");//规范星期的输出
-        //var hour=t.getHours();///获取当前时间的时
-        //var minute=t.getMinutes();//获取当前时间的分
-        //var second=t.getSeconds();//获取当前时间的秒
-        //var showTime=year+"/"+month+"/"+day+""+arr[week]+" "+hour+((minute<10)?":0":":")+minute+((second<10)?":0":":")+second+((hour>12)?".pm":".am");//规范整体时间的输出
-        showTime=year+((month<10)?"-0":"-")+(month+1)+((day<10)?"-0":"-")+day;//未知原因导致月份小1个月
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--/公共jsp -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 用来禁止浏览器缓存，使得每次请求test.html都从服务器下载最新版本 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=yes">
+
+    <link rel="stylesheet" href="css/bh-lib.min.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mob.css">
+    <link rel="stylesheet" href="css/skin.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/cropper.min.css">
+    <title>请假</title>
+</head>
+<script type="text/javascript">
+    var t = new Date();//获取当前时间
+    var year = t.getFullYear();//获取当前时间的年份
+    var month = t.getMonth();//获取当前时间的月份
+    var day = t.getDate();//获取当前时间的日
+    //var week=t.getDay();//获取当前时间的星期
+    //var arr=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");//规范星期的输出
+    //var hour=t.getHours();///获取当前时间的时
+    //var minute=t.getMinutes();//获取当前时间的分
+    //var second=t.getSeconds();//获取当前时间的秒
+    //var showTime=year+"/"+month+"/"+day+""+arr[week]+" "+hour+((minute<10)?":0":":")+minute+((second<10)?":0":":")+second+((hour>12)?".pm":".am");//规范整体时间的输出
+    showTime = year + ((month < 10) ? "-0" : "-") + (month + 1) + ((day < 10) ? "-0" : "-") + day;//未知原因导致月份小1个月
         //document.write(showTime);
-    </script>
+</script>
 
-    <body>
-        <div id="app"><!----> 
+<body>
+    <div id="app">
+        <!---->
+        <div>
             <div>
-                <div>
 
-                    <!--请假记录-->
-                    <a href="detail.html">
-                        <div class="mint-layout-container pjaw6zrp8"></div> 
-                        <div class="mint-layout-container cjarv696w">
-                            <div class="mint-layout-container bh-bg-color-light sjaku1g03 OPjdjwm5hrz">
+                <!--请假记录-->
+                <a href="detail.html">
+                    <div class="mint-layout-container pjaw6zrp8"></div>
+                    <div class="mint-layout-container cjarv696w">
+                        <div class="mint-layout-container bh-bg-color-light sjaku1g03 OPjdjwm5hrz">
 
-                                <!--请假类型-->
-                                <div class="mint-layout-lr OCjaup3gjn">
-                                    <div position="left" class="mint-layout-lr-item mint-layout-container">
-                                        <div class="mint-text bh-color-gray sjakvwd5t OCjaup3gjsk mt-color-default">
-                                            事假（外出）
-                                        </div>
+                            <!--请假类型-->
+                            <div class="mint-layout-lr OCjaup3gjn">
+                                <div position="left" class="mint-layout-lr-item mint-layout-container">
+                                    <div class="mint-text bh-color-gray sjakvwd5t OCjaup3gjsk mt-color-default">
+                                        事假（外出）
                                     </div>
-                                    <div position="right" class="mint-layout-lr-item mint-layout-container">
-                                        <div class="mint-text bh-color-gray sjakvxbio OCjaup3gjrk mt-color-default">
-                                            已通过
-                                        </div> 
-                                        <span class="mint-badge sjarv4c2z OCjaup3gjsp OPjdjwm5htz mt-color-white mt-bg-primary is-size-small bh-bg-color-green"></span>
-                                    </div>
-                                </div> 
-
-                                <!--请假日期-->
-                                <div class="mint-layout-lr">
-                                    <div position="left" class="mint-layout-lr-item mint-layout-container">
-                                        <!--改动点-->
-                                        <div class="mint-text bh-color-gray-3 sjaky9s9n mt-color-default">
-                                            <script>document.write(showTime);</script> 至 <script>document.write(showTime);</script> / 共1天
-                                        </div>
-                                    </div>
-                                    <div position="right" class="mint-layout-lr-item mint-layout-container OCjaup3gjo"></div>
                                 </div>
-
-                            </div> 
-                        </div>
-                    </a>
-
-
-                    <!--未销假提示-->
-                    <!--id用来定位元素,display属性：block=显示；none=隐藏-->
-                    <div id="error" class="mint-msgbox-wrapper" style="position: absolute; z-index: 2011;display: none;">
-                        <div class="mint-msgbox mt-bg-white">
-                            <div class="mint-msgbox-header">
-                                <div class="mint-msgbox-title mt-color-grey">
-                                    提示
+                                <div position="right" class="mint-layout-lr-item mint-layout-container">
+                                    <div class="mint-text bh-color-gray sjakvxbio OCjaup3gjrk mt-color-default">
+                                        已通过
+                                    </div>
+                                    <span
+                                        class="mint-badge sjarv4c2z OCjaup3gjsp OPjdjwm5htz mt-color-white mt-bg-primary is-size-small bh-bg-color-green"></span>
                                 </div>
                             </div>
-                            <div class="mint-msgbox-content">
-                                <div class="mint-msgbox-message mt-color-grey-lv3">
-                                    存在待审核或未销假的请假记录，不可继续请假!
+
+                            <!--请假日期-->
+                            <div class="mint-layout-lr">
+                                <div position="left" class="mint-layout-lr-item mint-layout-container">
+                                    <!--改动点-->
+                                    <div class="mint-text bh-color-gray-3 sjaky9s9n mt-color-default">
+                                        <script>document.write(showTime);</script> 至
+                                        <script>document.write(showTime);</script> / 共1天
+                                    </div>
+                                </div>
+                                <div position="right" class="mint-layout-lr-item mint-layout-container OCjaup3gjo">
                                 </div>
                             </div>
-                            <div class="mint-msgbox-btns">
-                                <!--onclick用来触发函数-->
-                                <button onclick="none()" class="mint-msgbox-btn mint-msgbox-confirm mt-btn-primary">
-                                    确定
-                                </button>
-                                <!--隐藏提示函数-->
-                                <script>
-                                    function none()
-                                    {
-                                        document.getElementById('error').style.display='none';
-                                    }
-                                </script>
-                            </div>
+
                         </div>
                     </div>
+                </a>
 
 
-                    <!--加号-->
-                    <button onclick="block()" style="border: 0;padding: 0;background-color: #f9f9f9;">
-                        <div class="mint-fixed-button mt-color-white sjarvhx43 mint-fixed-button--bottom-right mint-fixed-button--primary mt-bg-primary" size="40px" contentmargintop="0" text="+" style="right: 16px; bottom: 20px;">
-                            <div class="mint-fixed-button--plus">
-                                <div class="mint-fixed-button--plus_h"></div>
-                                <div class="mint-fixed-button--plus_v"></div>
+                <!--未销假提示-->
+                <!--id用来定位元素,display属性：block=显示；none=隐藏-->
+                <div id="error" class="mint-msgbox-wrapper" style="position: absolute; z-index: 2011;display: none;">
+                    <div class="mint-msgbox mt-bg-white">
+                        <div class="mint-msgbox-header">
+                            <div class="mint-msgbox-title mt-color-grey">
+                                提示
                             </div>
                         </div>
-                        <!--显示提示函数-->
-                        <script>
-                            function block()
-                            {
-                                document.getElementById('error').style.display='block';
-                            }
-                        </script>
-                    </button>
+                        <div class="mint-msgbox-content">
+                            <div class="mint-msgbox-message mt-color-grey-lv3">
+                                存在待审核或未销假的请假记录，不可继续请假!
+                            </div>
+                        </div>
+                        <div class="mint-msgbox-btns">
+                            <!--onclick用来触发函数-->
+                            <button onclick="none()" class="mint-msgbox-btn mint-msgbox-confirm mt-btn-primary">
+                                确定
+                            </button>
+                            <!--隐藏提示函数-->
+                            <script>
+                                function none() {
+                                    document.getElementById('error').style.display = 'none';
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
 
-    </body>
+
+                <!--加号-->
+                <button onclick="block()" style="border: 0;padding: 0;background-color: #f9f9f9;">
+                    <div class="mint-fixed-button mt-color-white sjarvhx43 mint-fixed-button--bottom-right mint-fixed-button--primary mt-bg-primary"
+                        size="40px" contentmargintop="0" text="+" style="right: 16px; bottom: 20px;">
+                        <div class="mint-fixed-button--plus">
+                            <div class="mint-fixed-button--plus_h"></div>
+                            <div class="mint-fixed-button--plus_v"></div>
+                        </div>
+                    </div>
+                    <!--显示提示函数-->
+                    <script>
+                        function block() {
+                            document.getElementById('error').style.display = 'block';
+                        }
+                    </script>
+                </button>
+
+</body>
+
 </html>

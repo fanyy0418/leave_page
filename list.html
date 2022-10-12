@@ -45,7 +45,7 @@
     //var minute=t.getMinutes();//获取当前时间的分
     //var second=t.getSeconds();//获取当前时间的秒
     //var showTime=year+"/"+month+"/"+day+""+arr[week]+" "+hour+((minute<10)?":0":":")+minute+((second<10)?":0":":")+second+((hour>12)?".pm":".am");//规范整体时间的输出
-    showTime = year + ((month < 10) ? "-0" : "-") + (month + 1) + ((day < 10) ? "-0" : "-") + day;//未知原因导致月份小1个月
+    showTime = year + ((month < 9) ? "-0" : "-") + (month + 1) + ((day < 10) ? "-0" : "-") + day;//未知原因导致月份小1个月
         //document.write(showTime);
 </script>
 

@@ -312,7 +312,7 @@
         //var minute=t.getMinutes();//获取当前时间的分
         //var second=t.getSeconds();//获取当前时间的秒
         //var showTime=year+"/"+month+"/"+day+""+arr[week]+" "+hour+((minute<10)?":0":":")+minute+((second<10)?":0":":")+second+((hour>12)?".pm":".am");//规范整体时间的输出
-        showTime=year+((month<10)?"-0":"-")+(month+1)+((day<10)?"-0":"-")+day;//未知原因导致月份小1个月
+        showTime=year+((month<9)?"-0":"-")+(month+1)+((day<10)?"-0":"-")+day;//未知原因导致月份小1个月
         //document.write(showTime);
     </script>
     <body>
@@ -682,6 +682,20 @@
                                             </div>
                                             <div class="mint-step__line mt-bg-grey-lv6"></div>
                                         </div>
+                                        <div class="mint-step bh-color-gray-3 mint-step--vertical mint-step--finish mt-color-grey-lv4">
+                                        <div class="mint-step__circle-container mt-bg-lv3"><i class="mint-icon mint-icon-checked iconfont icon-wancheng mt-color-primary"></i>
+                                        </div>
+                                        <div class="mint-step__time mt-color-grey-lv4">
+                                            <div class="mint-text bh-color-gray-4 OCjaunojrmr mt-color-default"></div>
+                                        </div>
+                                        <div class="mint-step__title">
+                                            院系审核
+                                            <span class="bh-color-warning">
+
+                                            </span>
+                                        </div>
+                                        <div class="mint-step__line mt-bg-grey-lv6"></div>
+                                    </div>
 
                                         <!--结束-->
                                         <div class="mint-step bh-color-gray-3 mint-step--vertical mint-step--finish mt-color-grey-lv4" text="结束">
